@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: mart_alertes_priorisees
+    description: Alertes du flux CERT Sante classees et priorisees pour un etablissement de sante
+    columns:
+      - name: id_alerte
+        data_tests: [unique, not_null]
+      - name: gravite
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['critique', 'haute', 'moyenne', 'faible']
+      - name: pertinence_hopital
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['haute', 'moyenne', 'faible']

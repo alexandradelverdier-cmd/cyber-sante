@@ -9,3 +9,7 @@ sources:
         description: Chiffres extraits par LLM des rapports de l'Observatoire CERT Sante
       - name: raw_alertes
         description: Alertes du flux RSS cyberveille, une ligne par alerte et par ingestion
+      - name: raw_classifications
+        description: Classification des alertes par l'agent LLM, une ligne par alerte et par passage
+      - name: raw_details_alertes
+        description: Details lus sur la page de chaque alerte (CVSS, exploitation, correctif)

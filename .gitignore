@@ -6,3 +6,7 @@ __pycache__/
 logs/
 sauvegarde_*.jsonl
 alertes_rss.jsonl
+a_classer.json
+a_enrichir.json
+classifications.jsonl
+details_alertes.jsonl
