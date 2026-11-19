@@ -1,0 +1,81 @@
+[0m14:22:01.368966 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1094d2bd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bc5e0f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bc5da60>]}
+
+
+============================== 14:22:01.374644 | 4a64c494-19d6-4cc1-b8f0-f5deb2a1dcf4 ==============================
+[0m14:22:01.374644 [info ] [MainThread]: Running with dbt=1.12.0
+[0m14:22:01.375156 [debug] [MainThread]: running dbt with arguments {'log_path': 'logs', 'warn_error': 'None', 'use_colors': 'True', 'cache_selected_only': 'False', 'maximum_seed_size_mib': '1', 'introspect': 'True', 'use_experimental_parser': 'False', 'log_format': 'default', 'fail_fast': 'False', 'empty': 'None', 'debug': 'False', 'printer_width': '80', 'hints_enabled': 'True', 'profiles_dir': '/Users/alexandradelverdier/.dbt', 'quiet': 'False', 'invocation_command': 'dbt init cyber_sante_dbt', 'indirect_selection': 'eager', 'no_print': 'None', 'static_parser': 'True', 'write_json': 'True', 'log_cache_events': 'False', 'version_check': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m14:22:01.390656 [debug] [MainThread]: Starter project path: /Users/alexandradelverdier/.pyenv/versions/3.12.9/envs/lewagon/lib/python3.12/site-packages/dbt/include/starter_project
+[0m14:22:01.395844 [info ] [MainThread]: Setting up your profile.
+[0m14:23:52.271311 [info ] [MainThread]: Profile cyber_sante_dbt written to /Users/alexandradelverdier/.dbt/profiles.yml using target's profile_template.yml and your supplied values.
+[0m14:23:52.275059 [info ] [MainThread]: Running dbt debug to validate the project...
+[0m14:23:52.276080 [info ] [MainThread]: dbt version: 1.12.0
+[0m14:23:52.276434 [info ] [MainThread]: python version: 3.12.9
+[0m14:23:52.276716 [info ] [MainThread]: python path: /Users/alexandradelverdier/.pyenv/versions/3.12.9/envs/lewagon/bin/python
+[0m14:23:52.276985 [info ] [MainThread]: os info: macOS-26.6.2-arm64-arm-64bit
+[0m14:23:52.327405 [info ] [MainThread]: Using profiles dir at /Users/alexandradelverdier/.dbt
+[0m14:23:52.327817 [info ] [MainThread]: Using profiles.yml file at /Users/alexandradelverdier/.dbt/profiles.yml
+[0m14:23:52.328048 [info ] [MainThread]: Using dbt_project.yml file at /Users/alexandradelverdier/code/alexandradelverdier-cmd/cyber-sante/cyber_sante_dbt/dbt_project.yml
+[0m14:23:52.328260 [info ] [MainThread]: adapter type: bigquery
+[0m14:23:52.328450 [info ] [MainThread]: adapter version: 1.12.2
+[0m14:23:52.469708 [info ] [MainThread]: Configuration:
+[0m14:23:52.470128 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m14:23:52.470360 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m14:23:52.470568 [info ] [MainThread]: Required dependencies:
+[0m14:23:52.470913 [debug] [MainThread]: Executing "git --help"
+[0m14:23:52.502045 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   history    EXPERIMENTAL: Rewrite history\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m14:23:52.502767 [debug] [MainThread]: STDERR: "b''"
+[0m14:23:52.503057 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m14:23:52.503341 [info ] [MainThread]: Connection:
+[0m14:23:52.503618 [info ] [MainThread]:   method: oauth
+[0m14:23:52.503821 [info ] [MainThread]:   database: alexandra-delverdier-perso
+[0m14:23:52.504028 [info ] [MainThread]:   execution_project: alexandra-delverdier-perso
+[0m14:23:52.504220 [info ] [MainThread]:   schema: cyber_sante
+[0m14:23:52.504410 [info ] [MainThread]:   location: EU
+[0m14:23:52.504595 [info ] [MainThread]:   priority: interactive
+[0m14:23:52.504778 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m14:23:52.504967 [info ] [MainThread]:   reservation: None
+[0m14:23:52.505155 [info ] [MainThread]:   impersonate_service_account: None
+[0m14:23:52.505342 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m14:23:52.505522 [info ] [MainThread]:   job_retries: 1
+[0m14:23:52.505705 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m14:23:52.505886 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m14:23:52.506067 [info ] [MainThread]:   job_link_info_level_log: False
+[0m14:23:52.506244 [info ] [MainThread]:   timeout_seconds: 300
+[0m14:23:52.506422 [info ] [MainThread]:   client_id: None
+[0m14:23:52.506596 [info ] [MainThread]:   token_uri: None
+[0m14:23:52.506776 [info ] [MainThread]:   compute_region: None
+[0m14:23:52.506965 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m14:23:52.507157 [info ] [MainThread]:   gcs_bucket: None
+[0m14:23:52.507341 [info ] [MainThread]:   dataproc_batch: None
+[0m14:23:52.507827 [info ] [MainThread]: Registered adapter: bigquery=1.12.2
+[0m14:23:52.681790 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m14:23:52.682301 [debug] [MainThread]: On debug: select 1 as id
+[0m14:23:52.682667 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:23:53.980682 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=alexandra-delverdier-perso&j=bq:EU:cf2215ff-8310-4782-9cbb-0f5618b42e05&page=queryresults
+[0m14:23:54.170193 [debug] [MainThread]: SQL status: OK in 0.188 seconds
+[0m14:23:54.493259 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m14:23:54.494063 [info ] [MainThread]: [32mAll checks passed![0m
+[0m14:23:54.494810 [info ] [MainThread]: Your new dbt project "cyber_sante_dbt" was created!
+Initialized new project in /Users/alexandradelverdier/code/alexandradelverdier-cmd/cyber-sante/cyber_sante_dbt/cyber_sante_dbt
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m14:23:54.495590 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 113.20878, "process_in_blocks": "0", "process_kernel_time": 0.639551, "process_mem_max_rss": "265060352", "process_out_blocks": "0", "process_user_time": 5.301698}
+[0m14:23:54.496233 [debug] [MainThread]: Command `dbt init` succeeded at 14:23:54.496100 after 113.21 seconds
+[0m14:23:54.496737 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m14:23:54.497218 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ba8e720>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b2c6360>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bb08800>]}
+[0m14:23:54.497770 [debug] [MainThread]: Flushing usage events
+[0m14:23:54.915014 [debug] [MainThread]: An error was encountered while trying to flush usage events

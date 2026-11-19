@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: cyber_sante
+    database: alexandra-delverdier-perso
+    schema: cyber_sante
+    tables:
+      - name: raw_indicateurs
+        description: Chiffres extraits par LLM des rapports de l'Observatoire CERT Sante

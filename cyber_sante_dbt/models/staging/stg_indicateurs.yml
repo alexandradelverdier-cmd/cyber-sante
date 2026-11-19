@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: stg_indicateurs
+    description: Un chiffre par annee x indicateur x dimension x modalite, corrections appliquees
+    columns:
+      - name: annee
+        data_tests: [not_null]
+      - name: indicateur
+        data_tests: [not_null]
+      - name: valeur
+        data_tests: [not_null]
+      - name: unite
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['nombre', 'pourcentage']
