@@ -3,3 +3,5 @@ cyber_sante_dbt/logs/
 cyber_sante_dbt/dbt_packages/
 __pycache__/
 .env
+logs/
+sauvegarde_*.jsonl
