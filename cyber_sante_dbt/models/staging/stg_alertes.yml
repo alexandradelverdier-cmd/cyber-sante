@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: stg_alertes
+    description: Une ligne par alerte du flux cyberveille CERT Sante, dedoublonnee
+    columns:
+      - name: id_alerte
+        data_tests: [unique, not_null]
+      - name: publie_le
+        data_tests: [not_null]
+      - name: editeur
+        data_tests: [not_null]

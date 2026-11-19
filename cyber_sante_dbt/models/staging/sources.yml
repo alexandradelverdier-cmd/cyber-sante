@@ -7,3 +7,5 @@ sources:
     tables:
       - name: raw_indicateurs
         description: Chiffres extraits par LLM des rapports de l'Observatoire CERT Sante
+      - name: raw_alertes
+        description: Alertes du flux RSS cyberveille, une ligne par alerte et par ingestion
