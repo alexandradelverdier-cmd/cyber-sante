@@ -35,6 +35,7 @@ dedoublonne as (
         partition by annee, indicateur, dimension, modalite, unite
         order by
             case origine_donnee when 'extraction_llm' then 1 else 2 end,
+            if(annee_rapport = annee, 0, 1),
             annee_rapport desc
     ) = 1
 )
