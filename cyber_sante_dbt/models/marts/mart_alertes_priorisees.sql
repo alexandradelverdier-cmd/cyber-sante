@@ -10,6 +10,17 @@ details as (
     qualify row_number() over (partition by id_alerte order by recupere_le desc) = 1
 ),
 
+parc_logiciel as (
+    select
+        a.id_alerte,
+        logical_or(l.repandu_en_france = 'oui') as repandu,
+        logical_or(l.repandu_en_france = 'non') as absent
+    from {{ ref('stg_alertes') }} a
+    inner join {{ ref('logiciels_sante_france') }} l
+        on strpos(lower(a.titre), l.motif) > 0
+    group by a.id_alerte
+),
+
 assemble as (
     select
         a.id_alerte,
@@ -33,12 +44,22 @@ assemble as (
         d.privileges,
         c.type_faille,
         c.categorie_si,
-        c.pertinence_hopital,
+        c.pertinence_hopital                 as pertinence_llm,
+        case
+            when p.absent and not p.repandu                    then 'faible'
+            when p.repandu and c.pertinence_hopital = 'faible' then 'moyenne'
+            else c.pertinence_hopital
+        end                                  as pertinence_hopital,
+        case
+            when p.id_alerte is null then 'avis_llm'
+            else 'liste_logiciels_france'
+        end                                  as source_pertinence,
         c.justification,
         a.lien
     from {{ ref('stg_alertes') }} a
     inner join classification c using (id_alerte)
     left join details d using (id_alerte)
+    left join parc_logiciel p using (id_alerte)
 )
 
 select

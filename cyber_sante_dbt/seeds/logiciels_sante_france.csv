@@ -1,0 +1,30 @@
+motif,usage,repandu_en_france,source
+dedalus,dossier patient,oui,Etude Black Book 2026 / lonasante
+dxcare,dossier patient,oui,Etude Black Book 2026
+orbis,dossier patient,oui,Etude Black Book 2026
+softway,dossier patient,oui,Etude Black Book 2026 / KLAS 2023
+hopital manager,dossier patient,oui,KLAS 2023 (656 sites en Europe)
+mediboard,dossier patient,oui,Referencement Segur
+maincare,dossier patient,oui,Etude Black Book 2026
+sillage,dossier patient,oui,Etude Black Book 2026
+cegedim,dossier patient,oui,Etude Black Book 2026
+evolucare,dossier patient,oui,Referencement Segur
+osiris,dossier patient,oui,Referencement Segur / ANSM
+cortexte,dossier patient psychiatrie,oui,OMEDIT Grand Est (58 etablissements psy)
+capcir,dossier patient psychiatrie,oui,OMEDIT Grand Est
+cariatides,dossier patient psychiatrie,oui,GIP Symaris
+berger-levrault,gestion administrative,oui,Etudes SESAM-Vitale
+mipih,gestion administrative,oui,Etudes SESAM-Vitale
+doctolib,prise de rendez-vous,oui,Xerfi
+outlook,messagerie,oui,Bureautique Microsoft
+exchange,messagerie,oui,Bureautique Microsoft
+windows,poste de travail,oui,Parc de postes
+citrix,acces distant,oui,Acces distant et virtualisation
+netscaler,acces distant,oui,Passerelle d'acces distant Citrix
+fortinet,pare-feu,oui,Secteur public
+vmware,virtualisation,oui,Infrastructure serveurs
+veeam,sauvegarde,oui,Sauvegardes
+firefox,poste de travail,oui,Navigateur
+chrome,poste de travail,oui,Navigateur
+oracle,base de donnees,oui,Bases de logiciels metier
+openemr,dossier patient,non,Logiciel americain absent des etudes de marche francaises
