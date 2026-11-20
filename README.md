@@ -37,7 +37,7 @@ flowchart LR
 
 Trois seeds portent les décisions humaines, versionnées et traçables :
 - `corrections_manuelles` : les erreurs détectées dans les rapports officiels, avec la preuve de chaque correction ;
-- `saisie_manuelle` : les chiffres clés publiés par l'ANS, en attendant leur extraction ;
+- `saisie_manuelle` : les chiffres clés publiés par l'ANS, utilisés seulement si une extraction échoue ;
 - `logiciels_sante_france` : les logiciels réellement répandus dans les établissements français, pour corriger la pertinence estimée par le modèle.
 
 14 tests dbt contrôlent le grain, les valeurs manquantes et les valeurs autorisées. La note hebdomadaire n'est produite que si tous les tests passent.
@@ -47,6 +47,8 @@ Trois seeds portent les décisions humaines, versionnées et traçables :
 **Les faits viennent de la source, le LLM ne juge que ce qu'il peut voir.** Une première version laissait le modèle estimer la gravité des failles à partir d'un résumé tronqué. Comparée au score CVSS officiel, cette estimation était juste dans 17 % des cas seulement, et sous-estimée dans 74 % des cas. La gravité, l'exploitation et la disponibilité d'un correctif sont donc désormais lues directement sur la page officielle de chaque alerte. Le modèle ne sert plus qu'à ce qu'il fait bien : rattacher l'alerte à une brique du système d'information hospitalier et juger sa pertinence.
 
 **Priorité à la source primaire.** Un même chiffre apparaît souvent dans plusieurs rapports. Pour chaque année, le modèle retient le chiffre publié dans le rapport de cette année-là, et ne recourt aux rapports suivants qu'à défaut.
+
+**Les sorties du LLM sont testées comme n'importe quelle donnée.** Le modèle range parfois un sous-total dans la catégorie « total ». Une règle dbt reclasse ces lignes, et un test vérifie qu'aucun faux total ne subsiste.
 
 **Un score de priorité lisible.** Pertinence pour un hôpital (1 à 3) × gravité CVSS (1 à 4), + 5 si la faille est déjà exploitée, + 2 si une preuve de concept est publique, + 2 en l'absence de correctif. Une faille moyenne déjà exploitée passe ainsi devant une faille critique encore théorique.
 
