@@ -40,7 +40,7 @@ Trois seeds portent les décisions humaines, versionnées et traçables :
 - `saisie_manuelle` : les chiffres clés publiés par l'ANS, en attendant leur extraction ;
 - `logiciels_sante_france` : les logiciels réellement répandus dans les établissements français, pour corriger la pertinence estimée par le modèle.
 
-13 tests dbt contrôlent le grain, les valeurs manquantes et les valeurs autorisées. La note hebdomadaire n'est produite que si tous les tests passent.
+14 tests dbt contrôlent le grain, les valeurs manquantes et les valeurs autorisées. La note hebdomadaire n'est produite que si tous les tests passent.
 
 ## Choix de conception
 

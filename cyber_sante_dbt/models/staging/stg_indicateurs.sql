@@ -3,7 +3,13 @@ with extrait as (
         cast(annee as int64)          as annee,
         cast(annee_rapport as int64)  as annee_rapport,
         lower(trim(indicateur))       as indicateur,
-        lower(trim(dimension))        as dimension,
+        -- Le LLM range parfois une sous-categorie dans la dimension "total" :
+        -- on la reclasse pour ne garder que les vrais totaux.
+        case
+            when lower(trim(dimension)) = 'total' and lower(trim(modalite)) != 'total'
+                then 'sous_categorie'
+            else lower(trim(dimension))
+        end                           as dimension,
         lower(trim(modalite))         as modalite,
         cast(valeur as float64)       as valeur,
         unite,
