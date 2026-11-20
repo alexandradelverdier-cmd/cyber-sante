@@ -5,7 +5,7 @@ Venant du milieu du soin, j'ai plusieurs fois travaillé en mode dégradé, pend
 Il réunit deux volets :
 
 1. **Un historique des incidents** déclarés au CERT Santé depuis 2020, reconstruit à partir des rapports annuels officiels.
-2. **Une veille hebdomadaire automatisée** sur les alertes de vulnérabilités publiées par le CERT Santé, priorisées pour un établissement de santé et résumées dans une note lisible par une direction.
+2. **Une veille hebdomadaire, lancée en une seule commande,** sur les alertes de vulnérabilités publiées par le CERT Santé, priorisées pour un établissement de santé et résumées dans une note lisible par une direction.
 
 ## Architecture
 
@@ -52,7 +52,7 @@ Trois seeds portent les décisions humaines, versionnées et traçables :
 
 **Un score de priorité lisible.** Pertinence pour un hôpital (1 à 3) × gravité CVSS (1 à 4), + 5 si la faille est déjà exploitée, + 2 si une preuve de concept est publique, + 2 en l'absence de correctif. Une faille moyenne déjà exploitée passe ainsi devant une faille critique encore théorique.
 
-**Une rédaction encadrée.** Les chiffres de la note sont calculés en Python, pas par le modèle. Le prompt interdit de transformer une vulnérabilité en attaque réussie ou d'ajouter un qualificatif absent des données. Chaque affirmation de la note a été vérifiée dans les données.
+**Une rédaction encadrée.** Les chiffres de la note sont calculés en Python, pas par le modèle. Le prompt interdit de transformer une vulnérabilité en attaque réussie ou d'ajouter un qualificatif absent des données. Les affirmations de la note d'exemple ont été vérifiées une à une dans les données.
 
 ## Résultats
 
@@ -65,7 +65,7 @@ Trois seeds portent les décisions humaines, versionnées et traçables :
 **Enseignements**
 - Les déclarations ont doublé entre 2020 et 2025, en partie parce que les établissements déclarent mieux.
 - Deux rappels « pour mémoire » des rapports officiels contredisent les chiffres publiés à l'origine. Pour 2020, le rapport 2022 indique 396 incidents, alors que la somme mensuelle de son propre graphique donne 369 : la hausse annoncée de 50 % était en réalité de 60 %.
-- Sur un mois d'alertes, aucune ne concernait un logiciel de dossier patient courant en France. Les priorités portent d'abord sur les accès à distance (VPN), la messagerie, les pare-feu et les sauvegardes.
+- Sur un mois d'alertes, aucune ne concernait un logiciel de dossier patient courant en France. Les priorités portent d'abord sur les accès à distance (VPN), la messagerie et les pare-feu.
 
 Un exemple de note hebdomadaire est disponible dans le dossier [`syntheses/`](syntheses/).
 
