@@ -44,7 +44,7 @@ Trois seeds portent les décisions humaines, versionnées et traçables :
 
 ## Choix de conception
 
-**Les faits viennent de la source, le LLM ne juge que ce qu'il peut voir.** Une première version laissait le modèle estimer la gravité des failles à partir d'un résumé tronqué. Comparée au score CVSS officiel, cette estimation était juste dans 17 % des cas seulement, et sous-estimée dans 74 % des cas. La gravité, l'exploitation et la disponibilité d'un correctif sont donc désormais lues directement sur la page officielle de chaque alerte. Le modèle ne sert plus qu'à ce qu'il fait bien : rattacher l'alerte à une brique du système d'information hospitalier et juger sa pertinence.
+**Les faits viennent de la source, le LLM ne juge que ce qu'il peut voir.** Une première version laissait le modèle estimer la gravité des failles à partir d'un résumé tronqué. Comparée au score CVSS officiel, cette estimation était juste dans 17 % des cas seulement, et sous-estimée dans 74 % des cas. La gravité, l'exploitation et la disponibilité d'un correctif sont donc désormais lues directement sur la page officielle de chaque alerte. Pour la classification, le modèle ne sert plus qu'à ce qu'il fait bien : rattacher l'alerte à une brique du système d'information hospitalier et juger sa pertinence.
 
 **Priorité à la source primaire.** Un même chiffre apparaît souvent dans plusieurs rapports. Pour chaque année, le modèle retient le chiffre publié dans le rapport de cette année-là, et ne recourt aux rapports suivants qu'à défaut.
 
